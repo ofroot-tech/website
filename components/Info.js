@@ -11,7 +11,7 @@ export default function Info() {
       </div>
       <div className="text-container">
         <p>
-        At ofroot.health, we are on a mission to empower healthcare providers and patients with cutting-edge AI solutions that enhance heart health monitoring and diagnostics. Our suite of AI-enabled tools is designed to minimize errors, improve patient outcomes, and bring a new level of precision and care to heart health management.
+          At ofroot.health, we are on a mission to empower healthcare providers and patients with cutting-edge AI solutions that enhance heart health monitoring and diagnostics. Our suite of AI-enabled tools is designed to minimize errors, improve patient outcomes, and bring a new level of precision and care to heart health management.
         </p>
       </div>
 
@@ -20,15 +20,36 @@ export default function Info() {
           display: flex;
           flex-direction: row;
           background-color: #F27C72;
-          padding: 10px 20px; /* Reduced padding */
+          padding: 10px 20px;
           align-items: center;
           justify-content: space-between;
-          margin-top: -800px; /* Reset margin */
+          margin-top: -800px;
+          opacity: 0;
+          animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in for entire section */
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
 
         .image-container {
           flex: 1;
           text-align: center;
+          opacity: 0;
+          transform: translateX(-30px); /* Slide in from the left */
+          animation: slideInImage 1.5s ease-in-out forwards 0.3s; /* Delayed for smooth effect */
+        }
+
+        @keyframes slideInImage {
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
         }
 
         .image-container img {
@@ -39,10 +60,20 @@ export default function Info() {
 
         .text-container {
           flex: 1;
-          padding: 10px; /* Reduced padding */
+          padding: 10px;
           color: white;
-          font-size: 1.1em; /* Adjusted font size */
-          line-height: 1.4em; /* Adjusted line height */
+          font-size: 1.1em;
+          line-height: 1.4em;
+          opacity: 0;
+          transform: translateX(30px); /* Slide in from the right */
+          animation: slideInText 1.5s ease-in-out forwards 0.6s; /* Delayed for smooth effect */
+        }
+
+        @keyframes slideInText {
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
         }
 
         .text-container p {
@@ -53,12 +84,12 @@ export default function Info() {
         @media (max-width: 768px) {
           .image-text-section {
             flex-direction: column;
-            padding: 10px; /* Reduced padding for mobile */
+            padding: 10px;
             margin-top: -900px;
           }
 
           .image-container {
-            margin-bottom: 10px; /* Reduced spacing */
+            margin-bottom: 10px;
           }
 
           .image-container img {

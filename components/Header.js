@@ -16,6 +16,7 @@ export default function Header() {
             {/* Example links can be added here */}
           </ul>
           <div className="icons">
+            {/* Add smooth transitions to the icons */}
             {/* <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
             <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
             <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
@@ -37,12 +38,33 @@ export default function Header() {
           padding: 10px 20px;
           display: flex;
           align-items: center;
+          opacity: 0;
+          animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in animation */
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
 
         .logo {
           color: white;
           font-size: 1.5em;
           font-weight: bold;
+          opacity: 0;
+          transform: translateY(-20px);
+          animation: slideDown 1.5s ease-in-out forwards;
+        }
+
+        @keyframes slideDown {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         nav {
@@ -60,12 +82,28 @@ export default function Header() {
         .icons {
           display: flex;
           gap: 20px;
+          opacity: 0;
+          transform: translateY(-20px);
+          animation: slideInIcons 1.5s ease-in-out forwards;
+        }
+
+        @keyframes slideInIcons {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         .icons a {
           color: white;
           text-decoration: none;
           font-size: 1.2em;
+          transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        .icons a:hover {
+          transform: scale(1.1); /* Slight scale on hover */
+          color: #FFD700; /* Change color on hover */
         }
 
         .cart {
