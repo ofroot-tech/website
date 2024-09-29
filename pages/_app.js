@@ -1,12 +1,5 @@
-import Head from 'next/head';
+// pages/_app.js
 
 export default function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-      </Head> 
-      <Component {...pageProps} />
-    </>
-  );
+  return <Component {...pageProps} />;
 }

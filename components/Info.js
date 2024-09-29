@@ -1,12 +1,16 @@
 import React from 'react';
+import Image from 'next/image'; // Import Next.js Image component
 
 export default function Info() {
   return (
     <section className="image-text-section">
       <div className="image-container">
-        <img
+        <Image
+          className="custom-image"
           src="/assets/heart-image.png"
           alt="Conference artwork"
+          width={500} // Set appropriate width and height for Next.js Image
+          height={300}
         />
       </div>
       <div className="text-container">
@@ -23,7 +27,7 @@ export default function Info() {
           padding: 10px 20px;
           align-items: center;
           justify-content: space-between;
-          margin-top: -800px;
+          margin-top: -800px; /* Check this value to ensure it's not breaking layout */
           opacity: 0;
           animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in for entire section */
         }
@@ -52,7 +56,7 @@ export default function Info() {
           }
         }
 
-        .image-container img {
+        .custom-image {
           max-width: 80%;
           height: auto;
           border-radius: 8px;
@@ -85,14 +89,14 @@ export default function Info() {
           .image-text-section {
             flex-direction: column;
             padding: 10px;
-            margin-top: -900px;
+            margin-top: -900px; /* Check this value as well */
           }
 
           .image-container {
             margin-bottom: 10px;
           }
 
-          .image-container img {
+          .custom-image {
             max-width: 100%;
           }
 
@@ -112,7 +116,7 @@ export default function Info() {
             font-size: 0.9em;
           }
 
-          .image-container img {
+          .custom-image {
             max-width: 90%;
           }
         }

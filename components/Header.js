@@ -17,11 +17,11 @@ export default function Header() {
           </ul>
           <div className="icons">
             {/* Add smooth transitions to the icons */}
-            {/* <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
+            <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
             <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
             <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
             <a href="#"><FontAwesomeIcon icon={faYoutube} /></a>
-            <a href="#" className="cart"><FontAwesomeIcon icon={faShoppingCart} /> 0</a> */}
+            <a href="#" className="cart"><FontAwesomeIcon icon={faShoppingCart} /> 0</a>
           </div>
         </div>
       </nav>

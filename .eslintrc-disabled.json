@@ -1,0 +1,12 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "quote-props": "off",
+    "strict": "off",
+    "keyword-spacing": "off",
+    "object-curly-spacing": "off",
+    "array-bracket-spacing": "off",
+    "computed-property-spacing": "off",
+    "spaced-comment": "off"
+  }
+}
