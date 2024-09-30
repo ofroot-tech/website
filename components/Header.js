@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header>
       <nav>
-        <div className="logo">OFHEALTH</div>
+        <div className="logo">OFROOTHEALTH</div>
         <div className="nav-container">
           <ul className="nav-links">
             {/* Example links can be added here */}
